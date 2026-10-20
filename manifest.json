@@ -1,0 +1,19 @@
+{
+  "name": "Universo da Biomedicina",
+  "short_name": "Universo Bio",
+  "description": "Estudos diários de Biomedicina",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f8f7",
+  "theme_color": "#123d4a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

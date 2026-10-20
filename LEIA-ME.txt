@@ -1,0 +1,14 @@
+UNIVERSO DA BIOMEDICINA — VERSÃO INICIAL
+
+Arquivos:
+- index.html: aplicativo
+- manifest.json: configuração instalável
+- icon.svg: ícone
+- sw.js: cache/offline básico
+
+IMPORTANTE:
+Para instalar como PWA no celular e no computador, publique os arquivos em um serviço HTTPS (por exemplo, GitHub Pages).
+Abrir index.html diretamente no computador permite testar o conteúdo, mas não habilita todos os recursos de instalação/offline.
+O progresso fica salvo no armazenamento local do navegador e não sincroniza automaticamente entre dispositivos.
+
+Esta é uma versão inicial demonstrativa. O conteúdo é educacional e não substitui aulas, protocolos, supervisão ou orientação profissional.

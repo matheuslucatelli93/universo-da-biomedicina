@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123d4a">
+<meta name="description" content="Seu espaço diário de estudos de Biomedicina: aulas, curiosidades, laboratório, graduação e quizzes.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Universo da Biomedicina</title>
+<style>
+:root{--navy:#123d4a;--teal:#167d83;--mint:#dff5ed;--paper:#f5f8f7;--ink:#183239;--muted:#63777b;--line:#dce7e4;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+header{background:linear-gradient(135deg,#123d4a,#176e72);color:white;padding:22px 18px 28px}
+.top{max-width:1040px;margin:auto;display:flex;align-items:center;gap:13px}.logo{width:52px;height:52px;border-radius:16px;background:#ffffff1c;display:grid;place-items:center;font-size:28px}
+h1{font-size:clamp(1.35rem,4vw,2rem);margin:0;line-height:1.15}header p{margin:7px 0 0;color:#d8efec}
+nav{max-width:1040px;margin:-14px auto 0;padding:0 12px;display:flex;gap:8px;overflow:auto}
+nav button{border:1px solid var(--line);background:white;border-radius:999px;padding:10px 14px;white-space:nowrap;color:var(--ink);font-weight:650;cursor:pointer}
+nav button.active{background:var(--navy);color:white;border-color:var(--navy)}
+main{max-width:1040px;margin:22px auto;padding:0 14px 36px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 4px 16px #123d4a08}.span8{grid-column:span 8}.span4{grid-column:span 4}.span6{grid-column:span 6}.span12{grid-column:span 12}
+.eyebrow{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}h2{font-size:1.28rem;line-height:1.25;margin:6px 0 10px}h3{margin:0 0 8px;font-size:1.02rem}p{margin:8px 0}.muted{color:var(--muted);font-size:.93rem}
+.hero{background:linear-gradient(135deg,#e0f5ed,#f4fbf8);border-color:#cbe9df}.pill{display:inline-block;background:var(--mint);color:#145c5b;padding:4px 9px;border-radius:99px;font-size:.78rem;font-weight:750;margin:3px 4px 3px 0}
+button.primary,.primary{background:var(--navy);color:white;border:0;border-radius:11px;padding:11px 15px;font-weight:750;cursor:pointer;text-decoration:none;display:inline-block}
+button.secondary{background:white;border:1px solid var(--line);color:var(--ink);border-radius:11px;padding:10px 13px;font-weight:700;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #55b6b2;outline-offset:3px}
+.lesson-list{display:grid;gap:10px}.lesson{border:1px solid var(--line);border-radius:13px;padding:13px;display:flex;justify-content:space-between;gap:12px;align-items:center}.lesson p{margin:3px 0 0;font-size:.88rem;color:var(--muted)}
+.statrow{display:flex;gap:10px}.stat{flex:1;background:#f5f9f8;border-radius:12px;padding:12px}.stat strong{font-size:1.45rem;display:block;color:var(--navy)}
+.progress{height:9px;background:#e6eeeb;border-radius:99px;overflow:hidden}.progress div{height:100%;width:0;background:var(--teal);transition:width .2s}
+.question{padding:14px 0;border-top:1px solid var(--line)}.answers{display:grid;gap:8px;margin-top:10px}.answers button{text-align:left;border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;cursor:pointer;color:var(--ink)}.answers button.chosen{border-color:var(--teal);background:#e8f7f2}.feedback{padding:10px 12px;border-radius:10px;margin-top:9px;background:#eef7f4;font-size:.92rem}
+.content{max-width:780px}.content h2{margin-top:0}.content ul{padding-left:22px}.callout{border-left:4px solid var(--teal);background:#f0f8f5;padding:12px 14px;border-radius:0 10px 10px 0;margin:14px 0}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:18px}
+.hidden{display:none!important}
+@media(max-width:680px){.span8,.span4,.span6{grid-column:span 12}.card{padding:15px}.statrow{gap:7px}.stat{padding:9px}.stat strong{font-size:1.25rem}.lesson{align-items:flex-start}.lesson button{padding:9px 10px}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="logo">🧬</div><div><h1>Universo da Biomedicina</h1><p>Seu conhecimento, um dia de cada vez.</p></div></div></header>
+<nav aria-label="Menu principal">
+<button class="active" data-view="inicio">🏠 Início</button><button data-view="aprender">📚 Aprender</button><button data-view="explorar">✨ Explorar</button><button data-view="laboratorio">🔬 Laboratório</button><button data-view="graduacao">🎓 Graduação</button><button data-view="progresso">📈 Meu progresso</button>
+</nav>
+<main>
+<section id="view-inicio" class="view">
+<div class="grid">
+<div class="card hero span8"><span class="eyebrow">Sua dose de ciência</span><h2 id="today-title">O que acontece com uma gota de sangue?</h2><p id="today-desc">Entenda como uma amostra é preparada e analisada em um hemograma.</p><p><span class="pill" id="today-topic">Hematologia</span><span class="pill">5–10 minutos</span><span class="pill">Nível iniciante</span></p><button class="primary" onclick="openLesson('hemograma')">Estudar aula do dia →</button></div>
+<div class="card span4"><span class="eyebrow">Seu progresso</span><div class="statrow"><div class="stat"><strong id="done-count">0</strong><span class="muted">aulas feitas</span></div><div class="stat"><strong id="quiz-score">0%</strong><span class="muted">acertos no quiz</span></div></div><p class="muted">Seu progresso fica salvo neste dispositivo.</p><div class="progress"><div id="progress-bar"></div></div></div>
+<div class="card span6"><h3>📅 Trilha da semana</h3><div class="lesson-list">
+<div class="lesson"><div><strong>Segunda · Ciência e curiosidades</strong><p>Corpo humano e genética</p></div><span>🧬</span></div>
+<div class="lesson"><div><strong>Terça · Exames laboratoriais</strong><p>Hemograma, glicose e colesterol</p></div><span>🩸</span></div>
+<div class="lesson"><div><strong>Quarta · Microbiologia</strong><p>Bactérias, vírus e fungos</p></div><span>🦠</span></div>
+<div class="lesson"><div><strong>Quinta · Bastidores</strong><p>Equipamentos e técnicas</p></div><span>🔬</span></div>
+<div class="lesson"><div><strong>Sexta · Ciência atual</strong><p>Pesquisas e novas tecnologias</p></div><span>🧪</span></div>
+<div class="lesson"><div><strong>Sábado · Carreira</strong><p>Áreas de atuação</p></div><span>🎓</span></div>
+<div class="lesson"><div><strong>Domingo · Revisão</strong><p>Quiz e recuperação de conteúdo</p></div><span>📝</span></div></div></div>
+<div class="card span6"><h3>💡 Curiosidade rápida</h3><p>Hemácias humanas maduras normalmente não possuem núcleo. Isso deixa mais espaço para a hemoglobina, proteína que transporta oxigênio.</p><div class="callout"><strong>Para lembrar:</strong> hemácias transportam gases; leucócitos participam da defesa; plaquetas ajudam na coagulação.</div><button class="secondary" onclick="setView('explorar')">Ver mais curiosidades</button></div>
+<div class="card span12"><h3>🎯 Seu objetivo de hoje</h3><p>Estude uma aula curta e responda a três perguntas. Consistência importa mais do que estudar por muitas horas de uma só vez.</p><button class="primary" onclick="openLesson('hemograma')">Começar agora</button></div>
+</div></section>
+<section id="view-aprender" class="view hidden"><div class="card"><span class="eyebrow">Biblioteca de aulas</span><h2>Aprender Biomedicina</h2><p class="muted">Comece pelos fundamentos. Novas aulas podem ser adicionadas conforme as disciplinas da sua faculdade.</p><div class="lesson-list">
+<div class="lesson"><div><strong>O que acontece com uma gota de sangue?</strong><p>Hematologia · Amostras e hemograma</p></div><button class="secondary" onclick="openLesson('hemograma')">Abrir</button></div>
+<div class="lesson"><div><strong>Hemácias, leucócitos e plaquetas</strong><p>Componentes do sangue · Fundamentos</p></div><button class="secondary" onclick="openLesson('celulas')">Abrir</button></div>
+<div class="lesson"><div><strong>Vírus e bactérias: qual é a diferença?</strong><p>Microbiologia · Conceitos básicos</p></div><button class="secondary" onclick="openLesson('microbios')">Abrir</button></div>
+</div></div><div id="lesson-content" class="card content hidden" style="margin-top:14px"></div></section>
+<section id="view-explorar" class="view hidden"><div class="grid">
+<div class="card span6"><span class="eyebrow">Curiosidade</span><h2>O sangue é um tecido</h2><p>Embora seja líquido, o sangue é classificado como tecido conjuntivo especializado. Ele contém células e fragmentos celulares suspensos no plasma.</p><p class="muted">Conceito fundamental de histologia e fisiologia.</p></div>
+<div class="card span6"><span class="eyebrow">Você sabia?</span><h2>Nem todo microrganismo causa doença</h2><p>O corpo humano abriga comunidades de microrganismos que podem contribuir para funções importantes, como a digestão e a proteção contra alguns agentes patogênicos.</p><p class="muted">O efeito depende do microrganismo, do local e das condições do hospedeiro.</p></div>
+<div class="card span6"><span class="eyebrow">Genética</span><h2>O DNA é compacto</h2><p>O DNA de uma célula humana precisa ser organizado em estruturas chamadas cromossomos para caber no núcleo celular. Proteínas como as histonas ajudam nessa organização.</p></div>
+<div class="card span6"><span class="eyebrow">Exames</span><h2>Um resultado não conta a história toda</h2><p>Resultados laboratoriais precisam ser interpretados considerando contexto clínico, preparo, coleta, método e intervalos de referência. Um valor isolado não confirma necessariamente um diagnóstico.</p></div>
+</div></section>
+<section id="view-laboratorio" class="view hidden"><div class="grid">
+<div class="card span6"><span class="eyebrow">Equipamento</span><h2>🔬 Analisador hematológico</h2><p>Equipamento que automatiza a contagem e a classificação de células do sangue. Os métodos variam conforme o aparelho; alguns resultados ou alertas exigem revisão adicional.</p><div class="callout">Na prática: identificação correta, controle de qualidade, manutenção e validação dos resultados são etapas essenciais.</div></div>
+<div class="card span6"><span class="eyebrow">Amostras</span><h2>🧪 Por que usar EDTA?</h2><p>O EDTA é um anticoagulante utilizado habitualmente em tubos para hemograma. Ele se liga ao cálcio e impede a coagulação da amostra, ajudando a manter as células disponíveis para análise.</p><div class="callout">Importante: cada exame exige tubo, conservação e processamento compatíveis com o método.</div></div>
+<div class="card span12"><h3>Fluxo básico de uma amostra</h3><div class="lesson-list">
+<div class="lesson"><div><strong>1. Fase pré-analítica</strong><p>Solicitação, identificação, preparo, coleta, transporte e verificação da amostra.</p></div><span>📋</span></div>
+<div class="lesson"><div><strong>2. Fase analítica</strong><p>Execução do teste conforme procedimento, com controles de qualidade.</p></div><span>⚙️</span></div>
+<div class="lesson"><div><strong>3. Fase pós-analítica</strong><p>Validação, liberação e comunicação apropriada dos resultados.</p></div><span>📄</span></div></div><p class="muted">Material educacional. Procedimentos reais devem seguir treinamento, supervisão, normas de biossegurança e protocolos do laboratório.</p></div>
+</div></section>
+<section id="view-graduacao" class="view hidden"><div class="grid">
+<div class="card span6"><span class="eyebrow">Fundamentos</span><h2>📖 Disciplinas da graduação</h2><ul><li>Anatomia e fisiologia</li><li>Biologia celular e molecular</li><li>Bioquímica</li><li>Microbiologia e imunologia</li><li>Hematologia</li><li>Parasitologia</li><li>Epidemiologia e saúde coletiva</li><li>Patologia e análises clínicas</li></ul></div>
+<div class="card span6"><span class="eyebrow">Estudo inteligente</span><h2>Como estudar melhor</h2><ul><li>Estude em blocos de 10–25 minutos.</li><li>Explique o conceito com suas próprias palavras.</li><li>Faça perguntas sem consultar o resumo.</li><li>Revise após um dia, uma semana e um mês.</li><li>Registre dúvidas para perguntar ao professor.</li></ul></div>
+<div class="card span12"><h3>Personalize sua trilha</h3><p>Envie PDFs, slides ou o nome da disciplina em uma conversa do ChatGPT e transforme o conteúdo em resumos, flashcards e questões. Esta versão inicial não sincroniza automaticamente com os materiais da faculdade.</p></div>
+</div></section>
+<section id="view-progresso" class="view hidden"><div class="grid">
+<div class="card span12"><span class="eyebrow">Seu painel</span><h2>Meu progresso</h2><div class="statrow"><div class="stat"><strong id="progress-lessons">0</strong><span class="muted">aulas concluídas</span></div><div class="stat"><strong id="progress-questions">0</strong><span class="muted">perguntas respondidas</span></div><div class="stat"><strong id="progress-accuracy">0%</strong><span class="muted">taxa de acerto</span></div></div><p style="margin-top:18px">Progresso geral</p><div class="progress"><div id="progress-bar-2"></div></div><p class="muted">Os dados ficam salvos localmente neste navegador. Se limpar os dados do navegador ou trocar de dispositivo, o progresso poderá não acompanhar você.</p><button class="secondary" onclick="resetProgress()">Zerar meu progresso</button></div>
+<div class="card span12"><h3>📝 Quiz rápido de fundamentos</h3><p>Responda e confira seu resultado.</p><div id="quiz"></div><button class="primary" onclick="finishQuiz()">Corrigir quiz</button><div id="quiz-result" aria-live="polite"></div></div>
+</div></section>
+</main>
+<footer>Universo da Biomedicina · Versão inicial 1.0 · Conteúdo educacional, não substitui aulas, protocolos ou orientação profissional.</footer>
+<script>
+const lessons={
+hemograma:{title:"O que acontece com uma gota de sangue?",topic:"Hematologia",time:"5–10 minutos",body:`<span class="eyebrow">Aula 01 · Hematologia</span><h2>O caminho de uma amostra de sangue</h2><p>Quando uma pessoa faz um hemograma, a amostra passa por etapas que ajudam a garantir que o resultado seja confiável.</p><h3>1. Identificação e preparo</h3><p>A equipe confere a identificação e a adequação da amostra. Para hemograma, é comum usar um tubo com EDTA, anticoagulante que impede a coagulação ao se ligar ao cálcio.</p><h3>2. Análise</h3><p>Um analisador hematológico pode contar e classificar células sanguíneas e medir parâmetros relacionados a elas.</p><ul><li><strong>Hemácias:</strong> transportam oxigênio principalmente por meio da hemoglobina.</li><li><strong>Leucócitos:</strong> participam da defesa do organismo.</li><li><strong>Plaquetas:</strong> participam da hemostasia, ajudando a conter sangramentos.</li></ul><h3>3. Revisão e resultado</h3><p>Dependendo dos resultados, alertas do equipamento e critérios do laboratório, pode ser necessária uma avaliação adicional, como a análise de um esfregaço sanguíneo ao microscópio.</p><div class="callout"><strong>Ideia-chave:</strong> qualidade do resultado depende das fases pré-analítica, analítica e pós-analítica.</div><h3>Curiosidade</h3><p>Hemácias humanas maduras normalmente não possuem núcleo, o que deixa mais espaço para a hemoglobina.</p><p class="muted">Material introdutório. A interpretação de exames depende do contexto clínico e deve ser feita por profissionais habilitados.</p>`},
+celulas:{title:"Hemácias, leucócitos e plaquetas",topic:"Sangue",time:"4–6 minutos",body:`<span class="eyebrow">Fundamentos · Sangue</span><h2>Três componentes importantes</h2><p>O sangue é formado por plasma e elementos figurados, entre eles hemácias, leucócitos e plaquetas.</p><ul><li><strong>Hemácias:</strong> células especializadas no transporte de gases, sobretudo oxigênio via hemoglobina.</li><li><strong>Leucócitos:</strong> grupo diverso de células que atuam na imunidade e defesa do organismo.</li><li><strong>Plaquetas:</strong> fragmentos celulares que participam da formação do tampão plaquetário e da coagulação.</li></ul><div class="callout">Dica de memória: hemácias transportam, leucócitos defendem, plaquetas ajudam a estancar.</div><p>Os números e características dessas células podem fornecer pistas importantes, mas não devem ser interpretados isoladamente para estabelecer diagnósticos.</p>`},
+microbios:{title:"Vírus e bactérias: qual é a diferença?",topic:"Microbiologia",time:"5–7 minutos",body:`<span class="eyebrow">Aula introdutória · Microbiologia</span><h2>Vírus não são bactérias</h2><p><strong>Bactérias</strong> são organismos celulares. Muitas vivem no ambiente ou no corpo humano sem causar doença; algumas podem provocar infecções.</p><p><strong>Vírus</strong> são agentes infecciosos acelulares que precisam utilizar a maquinaria de uma célula hospedeira para produzir novas partículas virais.</p><ul><li>Antibióticos atuam contra alvos bacterianos específicos; não tratam infecções virais.</li><li>Prevenção, diagnóstico e tratamento dependem do agente e do contexto clínico.</li></ul><div class="callout">Dica: bactéria é uma célula; vírus depende de uma célula hospedeira para se replicar.</div><p>Existem exceções e detalhes importantes em cada grupo, que serão estudados em microbiologia.</p>`}
+};
+let state=loadState();
+function loadState(){try{return JSON.parse(localStorage.getItem('ubio-progress'))||{done:[],answers:0,correct:0,quizAnswers:{}}}catch(e){return {done:[],answers:0,correct:0,quizAnswers:{}}}}
+function save(){localStorage.setItem('ubio-progress',JSON.stringify(state));updateProgress()}
+function updateProgress(){let n=state.done.length;document.getElementById('done-count').textContent=n;document.getElementById('progress-lessons').textContent=n;document.getElementById('progress-questions').textContent=state.answers;let rate=state.answers?Math.round(state.correct/state.answers*100):0;document.getElementById('quiz-score').textContent=rate+'%';document.getElementById('progress-accuracy').textContent=rate+'%';let p=Math.min(100,n/3*100);document.getElementById('progress-bar').style.width=p+'%';document.getElementById('progress-bar-2').style.width=p+'%'}
+function setView(name){document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));document.getElementById('view-'+name).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===name));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+function openLesson(id){setView('aprender');let l=lessons[id],el=document.getElementById('lesson-content');el.classList.remove('hidden');el.innerHTML=l.body+`<p><button class="primary" onclick="completeLesson('${id}')">${state.done.includes(id)?'✓ Aula concluída':'Marcar aula como concluída'}</button></p>`;el.scrollIntoView({behavior:'smooth',block:'start'})}
+function completeLesson(id){if(!state.done.includes(id))state.done.push(id);save();openLesson(id)}
+const questions=[
+{q:'Qual é a principal função das hemácias?',a:['Produzir anticorpos','Transportar oxigênio','Produzir plaquetas'],correct:1,why:'A hemoglobina das hemácias transporta a maior parte do oxigênio no sangue.'},
+{q:'Por que o EDTA é usado em tubos para hemograma?',a:['Para impedir a coagulação da amostra','Para aumentar o número de células','Para destruir os microrganismos'],correct:0,why:'O EDTA se liga ao cálcio e atua como anticoagulante.'},
+{q:'Qual equipamento pode contar células sanguíneas automaticamente?',a:['Oxímetro','Eletrocardiógrafo','Analisador hematológico'],correct:2,why:'O analisador hematológico automatiza a contagem e a classificação de células do sangue.'}
+];
+function renderQuiz(){document.getElementById('quiz').innerHTML=questions.map((q,i)=>`<div class="question"><strong>${i+1}. ${q.q}</strong><div class="answers">${q.a.map((a,j)=>`<button data-q="${i}" data-a="${j}" onclick="chooseAnswer(${i},${j})" class="${state.quizAnswers[i]===j?'chosen':''}">${String.fromCharCode(65+j)}) ${a}</button>`).join('')}</div><div id="feedback-${i}"></div></div>`).join('')}
+function chooseAnswer(i,j){state.quizAnswers[i]=j;renderQuiz()}
+function finishQuiz(){let answered=0,correct=0;questions.forEach((q,i)=>{let a=state.quizAnswers[i],f=document.getElementById('feedback-'+i);if(a!==undefined){answered++;if(a===q.correct)correct++;f.innerHTML=`<div class="feedback">${a===q.correct?'✅ Correto!':'🔎 Vamos revisar.'} ${q.why}</div>`}else f.innerHTML='<div class="feedback">Escolha uma alternativa para responder.</div>'});state.answers+=answered;state.correct+=correct;save();document.getElementById('quiz-result').innerHTML=`<div class="callout"><strong>Resultado: ${correct}/${answered||0} acertos.</strong> ${answered===questions.length?'Revise as explicações e tente novamente depois.':'Responda às demais perguntas para completar o quiz.'}</div>`}
+function resetProgress(){if(confirm('Deseja realmente apagar o progresso salvo neste navegador?')){state={done:[],answers:0,correct:0,quizAnswers:{}};save();renderQuiz();document.getElementById('quiz-result').innerHTML='';}}
+renderQuiz();updateProgress();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body></html>
