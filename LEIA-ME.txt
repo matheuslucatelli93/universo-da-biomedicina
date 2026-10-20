@@ -12,3 +12,6 @@ Abrir index.html diretamente no computador permite testar o conteúdo, mas não 
 O progresso fica salvo no armazenamento local do navegador e não sincroniza automaticamente entre dispositivos.
 
 Esta é uma versão inicial demonstrativa. O conteúdo é educacional e não substitui aulas, protocolos, supervisão ou orientação profissional.
+
+
+VERSAO CORRIGIDA: esta versão inclui ícones PNG de 192x192 e 512x512 para melhorar a compatibilidade com a instalação. Se já publicou a versão anterior, envie/substitua também estes arquivos e atualize manifest.json e sw.js no repositório.
