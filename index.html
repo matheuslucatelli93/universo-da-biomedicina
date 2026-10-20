@@ -129,6 +129,6 @@ function chooseAnswer(i,j){state.quizAnswers[i]=j;renderQuiz()}
 function finishQuiz(){let answered=0,correct=0;questions.forEach((q,i)=>{let a=state.quizAnswers[i],f=document.getElementById('feedback-'+i);if(a!==undefined){answered++;if(a===q.correct)correct++;f.innerHTML=`<div class="feedback">${a===q.correct?'✅ Correto!':'🔎 Vamos revisar.'} ${q.why}</div>`}else f.innerHTML='<div class="feedback">Escolha uma alternativa para responder.</div>'});state.answers+=answered;state.correct+=correct;save();document.getElementById('quiz-result').innerHTML=`<div class="callout"><strong>Resultado: ${correct}/${answered||0} acertos.</strong> ${answered===questions.length?'Revise as explicações e tente novamente depois.':'Responda às demais perguntas para completar o quiz.'}</div>`}
 function resetProgress(){if(confirm('Deseja realmente apagar o progresso salvo neste navegador?')){state={done:[],answers:0,correct:0,quizAnswers:{}};save();renderQuiz();document.getElementById('quiz-result').innerHTML='';}}
 renderQuiz();updateProgress();renderCard(pickCard(false).id);renderReviewList();
-if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(reg=>reg.update()).catch(()=>{});});
 </script>
 </body></html>
