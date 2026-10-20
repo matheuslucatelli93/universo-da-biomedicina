@@ -15,3 +15,6 @@ Esta é uma versão inicial demonstrativa. O conteúdo é educacional e não sub
 
 
 VERSAO CORRIGIDA: esta versão inclui ícones PNG de 192x192 e 512x512 para melhorar a compatibilidade com a instalação. Se já publicou a versão anterior, envie/substitua também estes arquivos e atualize manifest.json e sw.js no repositório.
+
+
+ATUALIZACAO 1.1: aula de hemograma ampliada com fluxo da solicitação ao laudo, coleta, tubo com EDTA, triagem, analisador, controle de qualidade, revisão microscópica e validação. O cache foi versionado para v5.
