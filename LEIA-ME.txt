@@ -1,4 +1,4 @@
-UNIVERSO DA BIOMEDICINA — VERSÃO INICIAL
+UNIVERSO DA BIOMEDICINA — VERSÃO 1.3
 
 Arquivos:
 - index.html: aplicativo
@@ -29,3 +29,11 @@ ATUALIZACAO 1.2 - CARDS DE MICROSCOPIA
   morfológico real, a próxima atualização pode incluir microfotografias licenciadas
   com crédito ao autor e à licença.
 - Procedimentos reais devem seguir POPs locais, treinamento e supervisão.
+
+
+ATUALIZACAO 1.3 - MICROFOTOGRAFIAS REAIS E MAIS EXEMPLOS
+- Foram adicionados 8 cards de referência para parasitologia e hemoparasitas: Giardia (cisto e trofozoíto), Plasmodium/malária, Cryptosporidium, Trichomonas e Entamoeba, além de gota espessa.
+- Esses cards usam links de imagens externas atribuídas ao CDC/DPDx e oferecem link para a página oficial com a legenda e o contexto. É necessário acesso à internet para carregar as microfotografias.
+- Se uma imagem específica não carregar, abra a fonte oficial indicada no card. Os caminhos de imagens dos sites podem mudar.
+- Os cards anteriores com desenhos foram rotulados explicitamente como ilustrações didáticas, não como microfotografias reais.
+- As imagens são referências educacionais; não são amostras do usuário nem servem isoladamente para diagnóstico. A interpretação depende de preparação, método, controles, treinamento e protocolo do laboratório.
