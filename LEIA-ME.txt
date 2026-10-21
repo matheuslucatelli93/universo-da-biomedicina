@@ -18,3 +18,14 @@ VERSAO CORRIGIDA: esta versão inclui ícones PNG de 192x192 e 512x512 para melh
 
 
 ATUALIZACAO 1.1: aula de hemograma ampliada com fluxo da solicitação ao laudo, coleta, tubo com EDTA, triagem, analisador, controle de qualidade, revisão microscópica e validação. O cache foi versionado para v5.
+
+
+ATUALIZACAO 1.2 - CARDS DE MICROSCOPIA
+- Foram adicionados cards de hemácias, neutrófilos, plaquetas e coloração de Gram.
+- Cada card inclui imagem didática em estilo microscópico, reagentes/materiais,
+  como observar/analisar e alertas sobre limitações.
+- As imagens incluídas nesta versão são ilustrações esquemáticas educacionais,
+  não microfotografias clínicas. Elas servem para introdução visual; para treino
+  morfológico real, a próxima atualização pode incluir microfotografias licenciadas
+  com crédito ao autor e à licença.
+- Procedimentos reais devem seguir POPs locais, treinamento e supervisão.
